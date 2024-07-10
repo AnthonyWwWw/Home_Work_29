@@ -10,18 +10,18 @@ function App() {
   const count = useSelector(state => state.counter)
   const dispatch = useDispatch();
 
-  const inc = () => {
+  const handleIncrement = () => {
     dispatch(increment());
   } 
 
-  const dec = () => {
+  const handleDecrement = () => {
     dispatch(decrement());
   }
   
   return (
      <Box sx={{ width: '100%', maxWidth: 800}}>
-       <Button variant="contained" style={{width: 250}} onClick={inc}>Increment</Button>
-       <Button variant="contained" style={{width: 250}} onClick={dec}>Decrement</Button>
+       <Button variant="contained" style={{width: 250}} onClick={handleIncrement}>Increment</Button>
+       <Button variant="contained" style={{width: 250}} onClick={handleDecrement}>Decrement</Button>
 
        <Typography variant="h1" gutterBottom>Value: {count}</Typography>
     </Box>
