@@ -6,7 +6,7 @@ export const tasksSlice = createSlice({
   reducers: {
     addTask: (state, action) => {
       state.push(action.payload);
-    },
+    }, 
     deleteTask: (state, action) => {
       return state.filter(task => task.id !== action.payload);
     },

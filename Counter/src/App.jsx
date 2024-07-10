@@ -9,7 +9,7 @@ import { increment, decrement } from './redux/countSlice';
 function App() {
   const count = useSelector(state => state.counter)
   const dispatch = useDispatch();
- 
+
   const handleIncrement = () => {
     dispatch(increment());
   } 
@@ -17,19 +17,11 @@ function App() {
   const handleDecrement = () => {
     dispatch(decrement());
   }
-
-  const onClick = () => {
-    dispatch(increment());
-  } 
-
-  const onClick = () => {
-    dispatch(decrement());
-  } 
   
   return (
      <Box sx={{ width: '100%', maxWidth: 800}}>
-       <Button variant="contained" style={{width: 250}} onClick={onClick}>Increment</Button>
-       <Button variant="contained" style={{width: 250}} onClick={onClick}>Decrement</Button>
+       <Button variant="contained" style={{width: 250}} onClick={handleIncrement}>Increment</Button>
+       <Button variant="contained" style={{width: 250}} onClick={handleDecrement}>Decrement</Button>
 
        <Typography variant="h1" gutterBottom>Value: {count}</Typography>
     </Box>
